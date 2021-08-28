@@ -8,5 +8,5 @@ from .serializers import BookSerializer
 
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
-    serializers = BookSerializer
+    serializer_class = BookSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
